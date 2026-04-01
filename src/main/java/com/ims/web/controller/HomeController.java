@@ -16,7 +16,23 @@ public class HomeController {
 
 
     @GetMapping("/message")
-    public String message(){
+    public String message() {
         return "spring boot app !!" + serverPort;
     }
+
+    // 1 build and test
+    // 2 build docker image
+    //3  push image to docker hub
+
+    // drictoly github provide to readymade feature no need configure
+    ///   maven.yml file
+    // 1. login to docker hub
+    //   2.  build the docker image
+    //  3. push that image to docker hub
+
+
+    /// git hub action read your docker file and it will create a docker image
+    /// it will image to push image to docker hub
+
+
 }
