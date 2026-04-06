@@ -6,7 +6,7 @@ FROM openjdk:17
 
 Add "target/parent-0.0.1-SNAPSHOT.jar", "/opt/keerti/parent-0.0.1-SNAPSHOT.jar"
 
-ENV JAVA_OPTS= "-Xms2g -Xmx4g"
+#ENV JAVA_OPTS= "-Xms2g -Xmx4g"
 
 ENTRYPOINT ["java", "-jar", "/opt/keerti/parent-0.0.1-SNAPSHOT.jar"]
 
