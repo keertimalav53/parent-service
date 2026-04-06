@@ -1,13 +1,11 @@
-#FROM openjdk:10-jdk-slim
-#FROM  eclipse-temurin:17-jdk-alpine
-FROM openjdk:17
+# 1. Use a lightweight base image with Java installed
+FROM eclipse-temurin:17-jre-alpine
 
-#RUN mkdir "/opt/keerti"
+# 2. Set the directory where commands will run
+WORKDIR /opt/keerti
 
-Add "target/parent-0.0.1-SNAPSHOT.jar", "/opt/keerti/parent-0.0.1-SNAPSHOT.jar"
+# 3. Copy your compiled JAR from the host machine to the container
+COPY target/parent-0.0.1-SNAPSHOT.jar parent-0.0.1-SNAPSHOT.jar
 
-#ENV JAVA_OPTS= "-Xms2g -Xmx4g"
-
-ENTRYPOINT ["java", "-jar", "/opt/keerti/parent-0.0.1-SNAPSHOT.jar"]
-
-EXPOSE 8081
+# 4. Command to start the application
+ENTRYPOINT ["java", "-jar", "parent-0.0.1-SNAPSHOT.jar"]
