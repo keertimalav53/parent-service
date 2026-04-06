@@ -2,7 +2,7 @@
 #FROM  eclipse-temurin:17-jdk-alpine
 FROM openjdk:17
 
-RUN mkdir "/opt/keerti"
+#RUN mkdir "/opt/keerti"
 
 Add "target/parent-0.0.1-SNAPSHOT.jar", "/opt/keerti/parent-0.0.1-SNAPSHOT.jar"
 
