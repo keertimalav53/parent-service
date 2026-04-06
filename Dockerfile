@@ -1,5 +1,5 @@
 # 1. Use a lightweight base image with Java installed
-FROM openjdk:17-jdk
+FROM openjdk:17-jdk-alpine
 
 # 2. Set the directory where commands will run
 #WORKDIR /opt/keerti
