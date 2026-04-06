@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-alpine
 WORKDIR /opt/keerti
 
 # 3. Copy your compiled JAR from the host machine to the container
-COPY target/parent-0.0.1-SNAPSHOT.jar parent-0.0.1-SNAPSHOT.jar
+COPY target/parent-0.0.1-SNAPSHOT.jar /opt/keerti/parent-0.0.1-SNAPSHOT.jar
 
 # 4. Command to start the application
-ENTRYPOINT ["java", "-jar", "parent-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/opt/keerti/parent-0.0.1-SNAPSHOT.jar"]
