@@ -1,5 +1,5 @@
 # 1. Use a lightweight base image with Java installed
-FROM openjdk:17-jdk-alpine
+FROM eclipse-temurin:17
 
 # 2. Set the directory where commands will run
 #WORKDIR /opt/keerti
